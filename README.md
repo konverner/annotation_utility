@@ -4,7 +4,20 @@ GUI program that facilitates annotation of image data
 
 ## Running
 
+to launch the program, it needs to run the following command in a console:
 
+```python *\src\main.py```
+
+after that, all program's logs will appear in your console:
+
+```
+files removed: 0
+labels removed 42
+udpate: C:\projects\OCR\develop\to_valid\pe10.png
+next: ('C:\\projects\\OCR\\develop\\to_valid\\pe1000.png',
+udpate: C:\projects\OCR\develop\to_valid\pe1000.png наз-ся
+...
+```
 
 ## Usage
 
