@@ -10,13 +10,13 @@ GUI program that facilitates annotation of image data
 
 <img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface.png" width="324" height="324">
 
-fields:
+**fields:**
 
 img dir : path to the directory with images
 
 labels : path to the \*.tsv file with annotations
 
-buttons:
+**buttons:**
 
 save : save current changes
 
@@ -28,7 +28,7 @@ next : the next pair (image, label)
 
 previous : the previous pair (image, label)
 
-hot keys:
+**hot keys:**
 
 *shift + left arrow* : previous
 
@@ -58,4 +58,10 @@ pe10024.png	больших
 pe10026.png	чему ещё
 ```
 
-the second column is an annotation, it can be empty
+the second column is labels, it can be empty
+
+Insert paths into correspondent fields and click "upload"
+
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface2.png" width="324" height="324">
+
+## Known bags
