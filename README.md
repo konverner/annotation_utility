@@ -8,11 +8,13 @@ GUI program that facilitates annotation of image data
 
 ## Usage
 
+[](https://github.com/conwerner/annotation_utility/blob/main/images/interface3.png)
+
 fields:
 
 img dir : path to the directory with images
 
-labels : path to the \*.csv file with annotations
+labels : path to the \*.tsv file with annotations
 
 buttons:
 
@@ -33,3 +35,27 @@ hot keys:
 *shift + right arrow* : next
 
 *shift + space* : remove
+
+## Get started
+
+Prepare a directory with images. For, example,
+
+[](https://github.com/conwerner/annotation_utility/blob/main/images/interface1.png)
+
+Prepare a \*.tvs document with the list of image files. For, example
+
+```
+pe10.png	
+pe1000.png	наз-ся
+pe10001.png	то есть
+pe10003.png	смещение
+pe10005.png	движения
+pe10008.png	Ищем
+pe1001.png	равномерно
+pe10015.png	
+pe1002.png	наиболее
+pe10024.png	больших
+pe10026.png	чему ещё
+```
+
+the second column is an annotation, it can be empty
