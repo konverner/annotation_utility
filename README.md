@@ -8,7 +8,7 @@ GUI program that facilitates annotation of image data
 
 ## Usage
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface.png" width="64" height="64">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface.png" width="512" height="512">
 
 fields:
 
@@ -40,7 +40,7 @@ hot keys:
 
 Prepare a directory with images. For, example,
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface3.png" width="256" height="64">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface3.png" width="512" height="128">
 
 Prepare a \*.tvs document with the list of image files. For, example
 
