@@ -4,7 +4,11 @@ GUI program that facilitates annotation of image data
 
 ## Running
 
-to launch the program, it needs to run the following command in a console:
+1) install all libraries from requirements.txt
+
+```pip3 install -r requirements.txt```
+
+2) to launch the program, it needs to run the following command in a console:
 
 ```python *\src\main.py```
 
