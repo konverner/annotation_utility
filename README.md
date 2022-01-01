@@ -21,7 +21,7 @@ udpate: C:\projects\OCR\develop\to_valid\pe1000.png наз-ся
 
 ## Usage
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface.png" width="324" height="324">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/A.png" width="324" height="324">
 
 **fields:**
 
@@ -37,6 +37,8 @@ upload : upload images and labels into the program
 
 remove : remove a image from the directory and the correspondent label in \*.csv file
 
+help : link to this page
+
 next : the next pair (image, label)
 
 previous : the previous pair (image, label)
@@ -48,6 +50,11 @@ previous : the previous pair (image, label)
 *shift + right arrow* : next
 
 *shift + space* : remove
+
+
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/C.png" width="324" height="324">
+
+*if spelling is not correct (i.e. word does not exist) it will make a signal.*
 
 ## Get started
 
@@ -75,7 +82,7 @@ the second column is labels, it can be empty
 
 Insert paths into correspondent fields and click "upload"
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface2.png" width="324" height="324">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/B.png" width="324" height="324">
 
 ## Change log
 
@@ -92,3 +99,7 @@ Insert paths into correspondent fields and click "upload"
 uploaded
 
 ## Known bags
+
+Error: ```UnicodeDecodeError: 'utf-8' codec can't decode byte 0xed in position 22: invalid continuation byte```
+
+Solution: open file with labels, copy its content and paste in the new one, save it; i.e. recreate a file with labels.
