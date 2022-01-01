@@ -1,3 +1,6 @@
+"""
+Functions for data synchronization
+"""
 import os
 import collections
 

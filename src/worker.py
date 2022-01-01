@@ -1,4 +1,6 @@
-import os
+"""
+Class for handling data: switch, remove, change, etc.
+"""
 import collections
 
 class Worker:
