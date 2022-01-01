@@ -77,4 +77,18 @@ Insert paths into correspondent fields and click "upload"
 
 <img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface2.png" width="324" height="324">
 
+## Change log
+
+**v. 0.2 (01.01.2022)**
+
+-- spell checking for Russian added;
+
+-- help link added;
+
+-- GUI optimized.
+
+**v. 0.1 (23.12.2021)**
+
+uploaded
+
 ## Known bags
