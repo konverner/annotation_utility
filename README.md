@@ -64,7 +64,7 @@ previous : the previous pair (image, label)
 
 Prepare a directory with images. For, example,
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/B.png" width="556" height="200">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface3.png" width="556" height="200">
 
 Prepare a \*.tvs document with the list of image files. For, example
 
