@@ -86,9 +86,13 @@ the second column is labels, it can be empty
 
 Insert paths into correspondent fields and click "upload"
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/B.png" width="324" height="324">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/B.png" width="556" height="324">
 
 ## Change log
+
+**v. 0.3 (07.01.2022)**
+
+-- added an option to show only labels with spelling errors
 
 **v. 0.2 (01.01.2022)**
 
