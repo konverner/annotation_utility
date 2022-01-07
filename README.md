@@ -25,7 +25,7 @@ udpate: C:\projects\OCR\develop\to_valid\pe1000.png наз-ся
 
 ## Usage
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/A.png" width="324" height="324">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/A.png" width="556" height="324">
 
 **fields:**
 
@@ -56,7 +56,7 @@ previous : the previous pair (image, label)
 *shift + space* : remove
 
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/C.png" width="324" height="324">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/C.png" width="556" height="324">
 
 *if spelling is not correct (i.e. word does not exist) it will make a signal.*
 
@@ -64,7 +64,7 @@ previous : the previous pair (image, label)
 
 Prepare a directory with images. For, example,
 
-<img src="https://github.com/conwerner/annotation_utility/blob/main/images/interface3.png" width="512" height="200">
+<img src="https://github.com/conwerner/annotation_utility/blob/main/images/B.png" width="556" height="200">
 
 Prepare a \*.tvs document with the list of image files. For, example
 
