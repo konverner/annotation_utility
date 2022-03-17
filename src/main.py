@@ -22,6 +22,12 @@ def callback():
 def upload():
     PATH_DIR = e2.get()
     PATH_TXT = e3.get()
+    if len(os.listdir(PATH_DIR) ) == 0:
+        messagebox.showerror('ERROR', 'Directory is empty')
+        return
+    if not os.path.isfile(PATH_TXT):
+        messagebox.showerror('ERROR', 'File with labels does not exist')
+        return
     make_match(PATH_DIR,PATH_TXT)
     N = worker1.upload(PATH_TXT,PATH_DIR)
     l3.configure(text=f'0/{N}')
@@ -33,6 +39,7 @@ def upload():
 # next entity
 def next(update=True):
     global SHOW_ERRORS_ONLY
+
     new_label = e1.get()
     IMAGE_PATH = worker1.get_current()[0]
     if update:
@@ -61,6 +68,7 @@ def next(update=True):
     N = worker1.N
     l3.configure(text=f'{k}/{N}')
     load = Image.open(IMAGE_PATH)
+    load = load.resize((300, 128), Image.ANTIALIAS)
     render = ImageTk.PhotoImage(load)
     img.configure(image=render)
     img.image = render
@@ -98,6 +106,7 @@ def prev(event=None):
     N = worker1.N
     l3.configure(text=f'{k}/{N}')
     load = Image.open(r'{}'.format(IMAGE_PATH))
+    load = load.resize((300, 128), Image.ANTIALIAS)
     render = ImageTk.PhotoImage(load)
     img.configure(image=render)
     img.image = render

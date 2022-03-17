@@ -8,14 +8,17 @@ import collections
 def tsv_to_dict(PATH_TXT):
     name2label = dict()
     print(PATH_TXT)
-    txt = open(r'{}'.format(PATH_TXT), 'r',encoding="ISO-8859-1").read()
+    txt = open(r'{}'.format(PATH_TXT), 'r',encoding="utf-8").read()
     lines = txt.split('\n')
     for line in lines:
-        try:
-            name2label[line.split('\t')[0]] = line.split('\t')[1]
-        except:
-            print('ERROR (bad line):',line)
-            pass
+        if '\t' not in line:
+            print('ERROR: line', line, "does not have separator '\t'")
+        else:
+            try:
+                name2label[line.split('\t')[0]] = line.split('\t')[1]
+            except:
+                print('ERROR (bad line):',line)
+                pass
 
     name2label = collections.OrderedDict(sorted(name2label.items()))
 
@@ -38,17 +41,20 @@ def make_match(PATH_DIR, PATH_TXT,format=None):
 
     print("FIRST STEP")
     for f in os.listdir(PATH_DIR):
-        count += 1
-        if count%1000 == 0:
-            print(f"[{count}\{N}] files has been processed")
+        try:
+            count += 1
+            if count%1000 == 0:
+                print(f"[{count}\{N}] files has been processed")
 
-        remove = True
-        for name in name2label.keys():
-            if name == f:
-                remove = False
-        if remove:
-            os.remove(PATH_DIR + '\\' + f)
-            files_removed += 1
+            remove = True
+            for name in name2label.keys():
+                if name == f:
+                    remove = False
+            if remove:
+                os.remove(PATH_DIR + '\\' + f)
+                files_removed += 1
+        except:
+            print(f"{f} is not a file")
     new_name2label = dict()
 
     count = 0
@@ -66,11 +72,11 @@ def make_match(PATH_DIR, PATH_TXT,format=None):
         else:
             labels_removed += 1
 
-    file_txt = open(PATH_TXT,'w',encoding="ISO-8859-1")
+    file_txt = open(PATH_TXT,'w',encoding="utf-8")
     the_last = list(new_name2label.items())[-1]
     for item in new_name2label.items():
         if item != the_last:
-            file_txt.write(item[0]+'\t'+item[1]+'\n')
+            file_txt.write(item[0]+'\t'+str(item[1])+'\n')
     file_txt.write(the_last[0]+'\t'+the_last[1])
     file_txt.close()
 
@@ -78,9 +84,9 @@ def make_match(PATH_DIR, PATH_TXT,format=None):
 
 def rename_batch(PATH_IMAGES,PATH_LABELS,new_name,extension='png'):
     name2label = tsv_to_dict(PATH_LABELS)
-    file_txt = open(PATH_LABELS, 'w',encoding="ISO-8859-1")
+    file_txt = open(PATH_LABELS, 'w',encoding="utf-8")
     new_name2label = dict()
-    csv_content = open(PATH_LABELS,'r',encoding="ISO-8859-1").read()
+    csv_content = open(PATH_LABELS,'r',encoding="utf-8").read()
     csv_file = open(PATH_LABELS,'w')
 
     index = 0

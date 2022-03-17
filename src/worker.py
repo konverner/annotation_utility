@@ -48,7 +48,7 @@ class Worker:
 
     def save(self, PATH_TXT, PATH_DIR):
         counter = 0
-        file_txt = open(PATH_TXT, 'w')
+        file_txt = open(PATH_TXT, 'w', encoding='utf-8')
         the_last = self.name2label[-1]
         for item in self.name2label:
             if item != None:
@@ -58,11 +58,11 @@ class Worker:
                     path = path.replace(PATH_DIR, '')
                     label = item[1]['label']
                     try:
-                        file_txt.write((path[1:]+'\t'+label+'\n').encode('utf-8', "ignore").decode())
+                        file_txt.write(path[1:]+'\t'+label+'\n')
                     except:
                         print("ERROR:", label)
         path = the_last[0].replace(PATH_DIR, '')
-        file_txt.write((path[1:]+'\t'+the_last[1]['label']).encode('utf-8', "ignore").decode())
+        file_txt.write(path[1:]+'\t'+the_last[1]['label'])
         file_txt.close()
         counter += 1
         return counter
@@ -78,6 +78,7 @@ class Worker:
         return self.name2label[self.current]
 
     def get_current(self):
+        print("current:", self.current)
         while self.name2label[self.current] == None:
             self.current += 1
         return self.name2label[self.current]
