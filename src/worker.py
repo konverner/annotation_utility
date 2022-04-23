@@ -19,7 +19,7 @@ class Worker:
     def remove_current(self):
         print('remove:', self.name2label[self.current])
         self.name2label[self.current] = None
-        self.current += 1
+        self.current -= 1
 
     def upload(self, PATH_TXT, PATH_DIR):
         name2label = dict()
